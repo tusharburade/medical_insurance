@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: lightblue;
+      }
+
+      form {
+        width: 500px;
+        margin: 100px auto;
+        background-color: rgba(255, 255, 255, 0.7);
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+      }
+
+      h2 {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      p {
+        font-weight: bold;
+        margin-top: 20px;
+        margin-bottom: 5px;
+      }
+
+      input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        border: none;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+      }
+
+      input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        background-color: blue;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+        margin-top: 20px;
+      }
+
+      input[type="submit"]:hover {
+        cursor: pointer;
+        background-color: darkblue;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="http://127.0.0.1:5000/predict_charges" method="post">
+      <h2>Predict Health Insurance Charges</h2>
+      <p>Age:</p>
+      <p><input type="text" name="age" /></p>
+      <p>Sex:</p>
+      <p><input type="text" name="sex" /></p>
+      <p>BMI:</p>
+      <p><input type="text" name="bmi" /></p>
+      <p>Children:</p>
+      <p><input type="text" name="children" /></p>
+      <p>Smoker:</p>
+      <p><input type="text" name="smoker" /></p>
+      <p>Region:</p>
+      <p><input type="text" name="region" /></p>
+      <p><input type="submit" value="Submit" /></p>
+    </form>
+  </body>
+</html>
